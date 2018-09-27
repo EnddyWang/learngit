@@ -14,9 +14,10 @@ public class Demo {
 	private static final double redEnvelopes = 0.10;
 
 	public static void main(String[] args) {
-		Date date = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		System.out.println(60/10000);
+		Date date = new Date(new Date().getTime() - 60 * 60 * 24 * 1000);
+		String dateStr = new SimpleDateFormat("yyyyMMdd").format(date);
+		System.out.println(dateStr); 
+		System.out.println();
 	}
 
 	private static int PercentageRandom() {
